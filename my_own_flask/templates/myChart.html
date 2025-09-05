@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask, Plotly & Matplotlib</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>{{ title }}</h1>
+
+    <section id='forms'>
+        <form action='/line-graph' method='post'>
+            <label>Age (comma-separated):</label>
+            <input type='text' name='age' placeholder='16,23,36,43,51,56'><br>
+            <label>Weatlh (comma-separated):</label>
+            <input type='text' name='wealth' placeholder='0, 500, 2300, 10000, 42000, 90000'><br>
+            <button type='submit'>Generate Line Graph</button>
+        </form>
+
+        <form action='/table' method='post'>
+            <label>Country (comma-separated):</label>
+            <input type='text' name='country' placeholder='Jamaica, England, Spain'><br>
+            <label>Year (comma-separated):</label>
+            <input type='text' name='year' placeholder='200, 55, 1100'><br>
+            <label>Population (comma-separated):</label>
+            <input type='text' name='population' placeholder='20000, 550000, 11023230'><br>
+            <button type='submit'>Generate Table</button>
+        </form>
+    </section>
+
+        <hr>
+
+    <section id='plots'>
+    {% if plotly_chart %}
+    <div>
+        {{ plotly_chart | safe }}
+    </div>
+    {% endif %}
+    
+    {% if table_chart %}
+    <div>
+        {{ table_chart | safe }}
+    </div>
+    {% endif %}
+    
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</section>
+</body>
+</html>

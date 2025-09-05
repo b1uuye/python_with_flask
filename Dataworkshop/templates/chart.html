@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask, Plotly & Matplotlib</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>{{ title }}</h1>
+
+    <section id='forms'>
+        <form action='/bar-chart' method='post'>
+            <label>Book Genres (comma-separated):</label>
+            <input type='text' name='books' placeholder='Fiction, Fantasy, Horror'><br>
+            <label>Owned (comma-separated):</label>
+            <input type='text' name='sales' placeholder='20, 55, 7'><br>
+            <button type='submit'>Generate Bar Chart</button>
+        </form>
+        
+        <form action='/pie-chart' method='post'>
+            <label>Pets (comma-separated):</label>
+            <input type='text' name='pets' placeholder='Cat, Dog, Horse'><br>
+            <label>Owned (comma-separated):</label>
+            <input type='text' name='value' placeholder='7, 3, 1'><br>
+            <button type='submit'>Generate Pie Chart</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section id='plots'>
+        {% if plotly_chart %}
+        <div>
+            {{ plotly_chart | safe }}
+        </div>
+        {% endif %}
+        
+        {% if matplotlib_chart %}
+        <div>
+            {{ matplotlib_chart | safe }}
+        </div>
+        {% endif %}
+    </section>
+</body>
+</html>

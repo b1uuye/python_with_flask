@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(248, 245, 241);
+}
+
+#forms {
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#plots > div {
+    width: 700px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #0499aa;
+    border: 2px;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
