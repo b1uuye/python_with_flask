@@ -1,4 +1,4 @@
-# Data with Flask
+# Data with Flask📊
 Mainly experimenting with Python. Got a great understanding of how powerful python is and what it can be used for especially with matplotlib and plotly graphs.
 
 ## My own Flask
