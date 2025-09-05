@@ -6,4 +6,4 @@ Mainly experimenting with Python. Got a great understanding of how powerful pyth
 
 ## Images
 
-![Line Graph Image](line_graph)
+![Line Graph Image](line_graph.png)
