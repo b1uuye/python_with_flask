@@ -6,4 +6,10 @@ Mainly experimenting with Python. Got a great understanding of how powerful pyth
 
 ## Images
 
+### Line Graph
+
 ![Line Graph Image](line_graph.png)
+
+### Table
+
+![Table Image](table.png)
